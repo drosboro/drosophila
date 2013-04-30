@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title Drosophila
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-inverse.navbar-static-top
+      .navbar-inner
+        %a.brand{:href => "/"} Drosophila Simulation
+    #wrap
+      #main.container.clear-top
+        = yield
+    %footer.footer
+      .copyright.container
+        Copyright &copy; #{copyright_date_range(2013)} Dave Rosborough.  All Rights Reserved.

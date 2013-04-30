@@ -27,6 +27,10 @@ gem 'jbuilder', '~> 1.0.1'
 
 gem 'haml'
 
+gem 'bootstrap-sass', '~> 2.3.1.1'
+gem 'twitter-bootstrap-markup-rails', :git => "git://github.com/pusewicz/twitter-bootstrap-markup-rails.git"
+gem 'copyright_date_range'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

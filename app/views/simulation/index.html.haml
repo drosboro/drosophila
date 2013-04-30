@@ -1,69 +1,63 @@
-%h1 Fruit Fly Simulation
-
 = form_tag('/simulation/cross', :method => :post)
-
-%table
-  %tr
-    %th P generation
-    %th White eyes
-    %th Eyes absent
-    %th Yellow body
-    %th Antennapedia
-    %th Vestigial wings
-  %tr
-    %th= "\u2642"
-    %td 
-      = select_tag("p_male[white][]", options_for_select(["W", "w"], @p_male.alleles_for_gene(:white)[0]))
-      = select_tag("p_male[white][]", options_for_select(["W", "w"], @p_male.alleles_for_gene(:white)[1]))
-    %td 
-      = select_tag("p_male[eyes_absent][]", options_for_select(["A", "a"], @p_male.alleles_for_gene(:eyes_absent)[0]))
-      = select_tag("p_male[eyes_absent][]", options_for_select(["A", "a"], @p_male.alleles_for_gene(:eyes_absent)[1]))
-    %td
-      = select_tag("p_male[yellow][]", options_for_select(["Y", "y"], @p_male.alleles_for_gene(:yellow)[0]))
-      = select_tag("p_male[yellow][]", options_for_select(["Y", "y"], @p_male.alleles_for_gene(:yellow)[1]))
-    %td 
-      = select_tag("p_male[antennapedia][]", options_for_select(["P", "p"], @p_male.alleles_for_gene(:antennapedia)[0]))
-      = select_tag("p_male[antennapedia][]", options_for_select(["P", "p"], @p_male.alleles_for_gene(:antennapedia)[1]))
-    %td
-      = select_tag("p_male[vestigial][]", options_for_select(["V", "v"], @p_male.alleles_for_gene(:vestigial)[0]))
-      = select_tag("p_male[vestigial][]", options_for_select(["V", "v"], @p_male.alleles_for_gene(:vestigial)[1]))
-  %tr
-    %th= "\u2640"
-    %td
-      = select_tag("p_female[white][]", options_for_select(["W", "w"], @p_female.alleles_for_gene(:white)[0]))
-      = select_tag("p_female[white][]", options_for_select(["W", "w"], @p_female.alleles_for_gene(:white)[1]))
-    %td 
-      = select_tag("p_female[eyes_absent][]", options_for_select(["A", "a"], @p_female.alleles_for_gene(:eyes_absent)[0]))
-      = select_tag("p_female[eyes_absent][]", options_for_select(["A", "a"], @p_female.alleles_for_gene(:eyes_absent)[1]))
-    %td
-      = select_tag("p_female[yellow][]", options_for_select(["Y", "y"], @p_female.alleles_for_gene(:yellow)[0]))
-      = select_tag("p_female[yellow][]", options_for_select(["Y", "y"], @p_female.alleles_for_gene(:yellow)[1]))
-    %td 
-      = select_tag("p_female[antennapedia][]", options_for_select(["P", "p"], @p_female.alleles_for_gene(:antennapedia)[0]))
-      = select_tag("p_female[antennapedia][]", options_for_select(["P", "p"], @p_female.alleles_for_gene(:antennapedia)[1]))
-    %td
-      = select_tag("p_female[vestigial][]", options_for_select(["V", "v"], @p_female.alleles_for_gene(:vestigial)[0]))
-      = select_tag("p_female[vestigial][]", options_for_select(["V", "v"], @p_female.alleles_for_gene(:vestigial)[1]))
-
-
-
 
 = hidden_field_tag("p_male[x][]", "x")
 = hidden_field_tag("p_male[x][]", "X")
 = hidden_field_tag("p_female[x][]", "x")
 = hidden_field_tag("p_female[x][]", "x")
 
-%p
-  = submit_tag "Cross"
+%table.table
+  %tr
+    %th P
+    %th White eyes
+    %th Eyes absent
+    %th Yellow body
+    %th Antennapedia
+    %th Vestigial wings
+    %td.vcenter{:rowspan => 3}
+      = submit_tag "Cross", :class => "btn btn-primary"
+  %tr
+    %th= "\u2642"
+    %td 
+      = select_tag("p_male[white][]", options_for_select(["W", "w"], @p_male.alleles_for_gene(:white)[0]), :class => "input-mini")
+      = select_tag("p_male[white][]", options_for_select(["W", "w"], @p_male.alleles_for_gene(:white)[1]), :class => "input-mini")
+    %td 
+      = select_tag("p_male[eyes_absent][]", options_for_select(["A", "a"], @p_male.alleles_for_gene(:eyes_absent)[0]), :class => "input-mini")
+      = select_tag("p_male[eyes_absent][]", options_for_select(["A", "a"], @p_male.alleles_for_gene(:eyes_absent)[1]), :class => "input-mini")
+    %td
+      = select_tag("p_male[yellow][]", options_for_select(["Y", "y"], @p_male.alleles_for_gene(:yellow)[0]), :class => "input-mini")
+      = select_tag("p_male[yellow][]", options_for_select(["Y", "y"], @p_male.alleles_for_gene(:yellow)[1]), :class => "input-mini")
+    %td 
+      = select_tag("p_male[antennapedia][]", options_for_select(["P", "p"], @p_male.alleles_for_gene(:antennapedia)[0]), :class => "input-mini")
+      = select_tag("p_male[antennapedia][]", options_for_select(["P", "p"], @p_male.alleles_for_gene(:antennapedia)[1]), :class => "input-mini")
+    %td
+      = select_tag("p_male[vestigial][]", options_for_select(["V", "v"], @p_male.alleles_for_gene(:vestigial)[0]), :class => "input-mini")
+      = select_tag("p_male[vestigial][]", options_for_select(["V", "v"], @p_male.alleles_for_gene(:vestigial)[1]), :class => "input-mini")  
+  %tr
+    %th= "\u2640"
+    %td
+      = select_tag("p_female[white][]", options_for_select(["W", "w"], @p_female.alleles_for_gene(:white)[0]), :class => "input-mini")
+      = select_tag("p_female[white][]", options_for_select(["W", "w"], @p_female.alleles_for_gene(:white)[1]), :class => "input-mini")
+    %td 
+      = select_tag("p_female[eyes_absent][]", options_for_select(["A", "a"], @p_female.alleles_for_gene(:eyes_absent)[0]), :class => "input-mini")
+      = select_tag("p_female[eyes_absent][]", options_for_select(["A", "a"], @p_female.alleles_for_gene(:eyes_absent)[1]), :class => "input-mini")
+    %td
+      = select_tag("p_female[yellow][]", options_for_select(["Y", "y"], @p_female.alleles_for_gene(:yellow)[0]), :class => "input-mini")
+      = select_tag("p_female[yellow][]", options_for_select(["Y", "y"], @p_female.alleles_for_gene(:yellow)[1]), :class => "input-mini")
+    %td 
+      = select_tag("p_female[antennapedia][]", options_for_select(["P", "p"], @p_female.alleles_for_gene(:antennapedia)[0]), :class => "input-mini")
+      = select_tag("p_female[antennapedia][]", options_for_select(["P", "p"], @p_female.alleles_for_gene(:antennapedia)[1]), :class => "input-mini")
+    %td
+      = select_tag("p_female[vestigial][]", options_for_select(["V", "v"], @p_female.alleles_for_gene(:vestigial)[0]), :class => "input-mini")
+      = select_tag("p_female[vestigial][]", options_for_select(["V", "v"], @p_female.alleles_for_gene(:vestigial)[1]), :class => "input-mini")  
 
-%p Total number of flies: #{@eyes.count}
+.alert.alert-info Total number of flies: #{@eyes.count}
 / %p 
 /   In #{@eyes.count} flies there are:
 /   %ul
 /     %li= @eyes.count("red").to_s + " red-eyed"
 /     %li= @eyes.count("white").to_s + " white-eyed"
 
-%table  
+%table
   - for row in (0..(@f1_flies.count / 10))
     %tr
       - for col in (0..9)
