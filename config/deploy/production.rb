@@ -15,7 +15,7 @@
 # something that quacks like a hash can be used to set
 # extended properties on the server.
 # 
-server "prime.geckodigital.ca", user: "drosboro", roles: %w{web app db}
+server "one.geckodigital.ca", user: "drosboro", roles: %w{web app db}
 set :ssh_options, {
   port: 1977
 }
