@@ -1,7 +1,7 @@
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
-set :application, 'www.rosborough.ca/drosophila'
+set :application, 'drosophila.rosborough.ca'
 set :repo_url, 'ssh://backup/home/drosboro/git/drosophila.git'
 
 set :stage, :production
