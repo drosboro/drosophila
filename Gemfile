@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails', '4.2.9'
 
+gem 'puma'
 gem 'sqlite3'
 
 # Gems used only for assets and not required
@@ -31,15 +32,14 @@ gem 'bootstrap-sass', '~> 2.3.1.1'
 gem 'twitter-bootstrap-markup-rails', :git => "git://github.com/pusewicz/twitter-bootstrap-markup-rails.git"
 gem 'copyright_date_range'
 
-gem 'capistrano', '~> 3.1.0', require: false, group: :development
+# gem 'capistrano', '~> 3.1.0', require: false, group: :development
 
 
-group :development do
-  gem 'thin'
-  gem 'capistrano-rails',   '~> 1.1'
-  gem 'capistrano-bundler', '~> 1.1'
-  gem 'capistrano-rbenv', '~> 2.0'
-end
+# group :development do
+#   gem 'capistrano-rails',   '~> 1.1'
+#   gem 'capistrano-bundler', '~> 1.1'
+#   gem 'capistrano-rbenv', '~> 2.0'
+# end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -52,3 +52,5 @@ end
 
 # To use debugger
 # gem 'debugger'
+
+gem 'tzinfo-data'

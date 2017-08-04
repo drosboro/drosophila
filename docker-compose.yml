@@ -1,0 +1,8 @@
+drosophila:
+  container_name: drosophila_app
+  build: .
+  command: bundle exec rails s -p 3090 -b '0.0.0.0'
+  volumes:
+    - .:/myapp
+  ports:
+    - "3090:3090"
