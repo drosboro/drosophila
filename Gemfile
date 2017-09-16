@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.9'
 
 gem 'puma'
-gem 'sqlite3'
+# gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -54,3 +54,5 @@ gem 'copyright_date_range'
 # gem 'debugger'
 
 gem 'tzinfo-data'
+
+gem 'rails_12factor', group: :production
