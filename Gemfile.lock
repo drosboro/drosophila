@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/pusewicz/twitter-bootstrap-markup-rails.git
+  remote: https://github.com/pusewicz/twitter-bootstrap-markup-rails.git
   revision: c8ff20be64fbfe465651a93cdbf737e257b28914
   specs:
     twitter-bootstrap-markup-rails (0.3.2.2)
