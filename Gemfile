@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
+ruby "2.7.6"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.9'
+gem 'rails', '4.2.11.3'
 
 gem 'puma'
 # gem 'sqlite3'
