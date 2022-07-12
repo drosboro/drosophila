@@ -33,6 +33,8 @@ gem 'bootstrap-sass', '~> 2.3.1.1'
 gem 'twitter-bootstrap-markup-rails', :git => "https://github.com/pusewicz/twitter-bootstrap-markup-rails.git"
 gem 'copyright_date_range'
 
+gem 'bigdecimal', '1.3.5'
+
 # gem 'capistrano', '~> 3.1.0', require: false, group: :development
 
 
