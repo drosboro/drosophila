@@ -30,7 +30,7 @@ gem 'jbuilder'
 gem 'haml'
 
 gem 'bootstrap-sass', '~> 2.3.1.1'
-gem 'twitter-bootstrap-markup-rails', :git => "git://github.com/pusewicz/twitter-bootstrap-markup-rails.git"
+gem 'twitter-bootstrap-markup-rails', :git => "https://github.com/pusewicz/twitter-bootstrap-markup-rails.git"
 gem 'copyright_date_range'
 
 # gem 'capistrano', '~> 3.1.0', require: false, group: :development
